@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+.typewritter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 2px solid red;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .1em;
+  animation: typing 8s steps(14) infinite, blink-caret 1s step-end infinite;
+}
+
+@keyframes typing {
+  0%, 90%, 100% {
+    width: 0;
+  }
+
+  40%, 60% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: red;
+  }
+}
